@@ -5,21 +5,44 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Dan McLean | Industrial Designer, Design Educator & Consultant</title>
 <meta name="description" content="Dan McLean is an industrial designer, design educator and consultant based in Adelaide, Australia.">
-<style>
+  <style>
 :root {
-  --bg: #f8f7f3;
-  --text: #1e1e1e;
-  --muted: #6f6f6f;
-  --line: #d8d8d8;
-  --accent: #111111;
+  --bg: #000000;
+  --text: #f2f2f2;
+  --muted: #bfbfbf;
+  --line: #333333;
+  --accent: #8b0000;
 }
-
 * {
   box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  z-index: -1;
+}
+
+.logo {
+  width: 260px;
+  height: auto;
+  display: block;
+  margin-bottom: 30px;
 }
 
 body {
@@ -46,8 +69,9 @@ h1 {
   margin: 0;
   font-weight: 800;
   letter-spacing: -0.05em;
+  color: var(--accent);
 }
-
+  
 .tagline {
   margin-top: 18px;
   font-size: 1.3rem;
@@ -83,7 +107,7 @@ h2 {
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  color: var(--muted);
+  color: var(--accent);
 }
 
 p {
@@ -109,6 +133,7 @@ footer {
     padding: 50px 24px;
   }
 
+
   header {
     margin-bottom: 50px;
   }
@@ -122,8 +147,13 @@ footer {
 <body>
 <main>
 <header>
-  <h1>Dan McLean</h1>
-  <p class="tagline">
+
+  <img src="assets/dmc-logo.png"
+
+       alt="Dan McLean Logo"
+
+       class="logo">
+
     Industrial Designer · Design Educator · Consultant
   </p>
   <nav>
@@ -136,7 +166,7 @@ footer {
 <section id="about">
   <h2>About</h2>
   <p class="lead">
-    Dan McLean is Program Director of the Bachelor of Industrial Design and Master of Design at Adelaide University, Australia, where he is also a Senior Lecturer in Industrial Design.
+    Dan McLean is Program Director of the Bachelor of Industrial Design and Program Director of the Master of Design at Adelaide University, Australia, where he is also a Senior Lecturer in Industrial Design.
   </p>
   <p>
     His work spans industrial design education, product development, systems thinking, human-centred design, design visualisation, prototyping, industry engagement and international collaboration.
@@ -168,11 +198,21 @@ footer {
 </section>
 <section id="contact" class="contact">
   <h2>Contact</h2>
-  <p>Email: <a href="mailto:dan@danmclean.net">dan@danmclean.net</a></p>
-  <p>
-    YouTube:
-    <a href="https://www.youtube.com/channel/UCRmdWZCIE46zK4DPMi2XNmw/" target="_blank">
+  <p>Email:
+    <a href="mailto:dan@danmclean.net">
+      dan@danmclean.net
+    </a>
+  <p>LinkedIn:
+    <a href="https://www.linkedin.com/in/dan-mclean-b178a9/" target="_blank">
+      linkedin.com/in/dan-mclean-b178a9
+    </a>
+  </p>
+  <p>YouTube:
+    <a href="https://www.youtube.com/channel/UCRmdWZClE46zK4DPMl2XNmw" target="_blank">
       Dan McLean
+    </a>
+  </p>
+</section>
     </a>
   </p>
 </section>
@@ -181,4 +221,7 @@ footer {
 </footer>
 </main>
 </body>
+<video autoplay muted loop playsinline id="bg-video">
+  <source src="assets/background.mp4" type="video/mp4">
+</video>
 </html>
